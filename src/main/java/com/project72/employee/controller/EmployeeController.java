@@ -16,7 +16,7 @@ import com.project72.employee.service.EmployeeService;
 
 @RestController
 @RequestMapping("/api/registration/")
-
+@CrossOrigin(origins = "http://localhost:3000")
 
 public class EmployeeController {
 	
@@ -47,6 +47,11 @@ public class EmployeeController {
         Employee employee = null;
         employee = employeeService.getEmployeeById(id);
         return ResponseEntity.ok(employee);
+    }
+
+	@GetMapping("/employees")
+    public List<Employee> getAllEmployees() {
+        return  employeeService.getAllEmployees();
     }
 
 

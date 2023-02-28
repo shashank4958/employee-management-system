@@ -41,7 +41,20 @@ public class EmployeeServiceImpl implements EmployeeService{
         return employee;
     }
 	
-	
+	@Override
+    public List<Employee> getAllEmployees() {
+        List<EmployeeEntity> employeeEntities
+                = employeeRepository.findAll();
+        List<Employee> employees = employeeEntities
+                .stream()
+                .map(emp -> new Employee(
+                        emp.getId(),
+                        emp.getFirstName(),
+                        emp.getLastName(),
+                        emp.getEmailId()))
+                .collect(Collectors.toList());
+        return employees;
+    }
 	
 
 

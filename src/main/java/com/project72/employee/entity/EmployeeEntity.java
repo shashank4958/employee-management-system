@@ -23,5 +23,8 @@ public class EmployeeEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String firstName;
+	private String lastName;
+	private String emailId;
+	private long phoneNumber;
 
 }
