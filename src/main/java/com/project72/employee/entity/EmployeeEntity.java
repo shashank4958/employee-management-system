@@ -1,3 +1,9 @@
+
+	// class used to create database entity
+	// create table
+	// declare columns
+	// declare primary key and auto increment
+
 package com.project72.employee.entity;
 
 import jakarta.persistence.Entity;
@@ -14,10 +20,6 @@ import lombok.Data;
 
 public class EmployeeEntity {
 	
-	// class used to create database entity
-	// create table
-	// declare columns
-	// declare primary key and auto increment
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
