@@ -1,6 +1,12 @@
-package com.project72.employee.controller;
 
-import java.util.List;
+	// import rest controller
+	// request mapping
+	// create employee post mapping
+	// get list of employees get mapping
+	// delete an employee
+	// update an employee
+
+package com.project72.employee.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,26 +28,15 @@ public class EmployeeController {
 	
 	private EmployeeService employeeService;
 	
-	
 	public EmployeeController(EmployeeService employeeService) {
 		this.employeeService = employeeService;
 	}
 
-	// import rest controller
-	// request mapping
-	// create employee post mapping
-	// get list of employees get mapping
-	// delete an employee
-	// update an employee
-	
 	@PostMapping("/employees")
-	public Employee createEmployee(@RequestBody Employee employee) {
-		
-		
+	public Employee createEmployee(@RequestBody Employee employee) {	
 		return employeeService.createEmployee(employee);
 	}
-	
-	
+		
     @GetMapping("/employees/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable Long id) {
         Employee employee = null;

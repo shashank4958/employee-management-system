@@ -1,3 +1,6 @@
+
+//implement business logic for all methods declared in service interface
+
 package com.project72.employee.service;
 
 import org.springframework.beans.BeanUtils;
@@ -7,7 +10,7 @@ import com.project72.employee.entity.EmployeeEntity;
 import com.project72.employee.model.Employee;
 import com.project72.employee.repository.EmployeeRepository;
 
-//implement business logic for all methods declared in service interface
+
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService{
